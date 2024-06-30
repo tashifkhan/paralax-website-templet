@@ -10,7 +10,7 @@
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
-    perspective: 10px;
+    perspective: 10px; /* enables 3D - z axis */
 }
 
 .opening-container{
@@ -19,15 +19,15 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-    transform-style: preserve-3d;
+    transform-style: preserve-3d; /* Extends / Enables 3D in subsiquent contaiiners */
 }
 
 .background {
-    transform: translateZ(-69px) scale(7.9);
+    transform: translateZ(-69px) scale(7.9); /* background setting at higher deapth */
 }
 
 .foreground {
-    transform: translateZ(-9px) scale();
+    transform: translateZ(-9px) scale(); /* auto scales to fit the screen */
 }
 
 .heading {
@@ -51,7 +51,9 @@
 }
 
 .articles {
-    transform: translateZ(-0.8px) scale(1.08);
+    /* transform: translateZ(-0.8px) scale(1.08); 
+            ^ with this the paralax effect doesn't work -> images remain static
+    */
     background-color: #171717;
     color: rgba(253, 255, 240, 0.733);
     font-family: "Oswald", sans-serif;;
@@ -76,15 +78,15 @@ span {
 }
 
 .bg {
+    position: relative;
     display: flex;
-    /* position: relative; */
     width: 100%;
-    height: 400px;
+    height: 47vh;
     justify-content: center;
     align-items: center;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment:fixed; /* Makes the image staic in the bg */
 }
 
 .bg1 {
