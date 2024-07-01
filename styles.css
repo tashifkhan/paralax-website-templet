@@ -112,16 +112,17 @@ p {
 }
 
 .filler {
+    display: flex;
+    border: #999 solid 1px;
     background-color: #171717;
     width: 100vw;
     height: 26vh;
+    justify-content: center;
+    align-items: center;
 }
 
 .filler h2 {
     color: blanchedalmond;
     font-family: "Oswald", sans-serif;
-    margin-left: 27vw;
-    /* margin-right: 4vw; */
     font-size: 3rem;
-    padding: 4rem;
 }
